@@ -13,13 +13,13 @@
       "attrs": {}
     },
     {
-      "type": "wokwi-neopixel-matrix",
+      "type": "wokwi-neopixel-canvas",
       "id": "neopixels",
       "top": 0,
       "left": 0,
       "rotate": 0,
       "hide": false,
-      "attrs": { "rows": "16", "cols": "32", "pixelate": "1" }
+      "attrs": { "rows": "16", "cols": "32", "pixelate": "circle" }
     },
     {
       "type": "wokwi-potentiometer",
