@@ -42,9 +42,11 @@ void loop()
   }
 }
 
-string menu(string playername)
+//------------------------------------------------------------------------
+
+String menu(String playername)
 {
-  string pname, playername;
+  String pname;
 
   Serial.println("######SPACE INVADERS#####");
   Serial.println("          MENU           ");
@@ -52,10 +54,9 @@ string menu(string playername)
   pname = Serial.readStringUntil("\n");
   Serial.println("YOU HAVE CHOSEN: " + pname);
 
-  playername = pname;
-  
-  return playername;
+  return pname;
 }
+
 
 int highscore(int scoring)
 {
