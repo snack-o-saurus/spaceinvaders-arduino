@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "author": "Maik Peters, Mats Althaus",
+  "editor": "wokwi online",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 400,
+      "left": 0,
+      "rotate": 0,
+      "hide": false,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-neopixel-matrix",
+      "id": "neopixels",
+      "top": 0,
+      "left": 0,
+      "rotate": 0,
+      "hide": false,
+      "attrs": { "rows": "16", "cols": "32", "pixelate": "1" }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot",
+      "top": 400,
+      "left": 340,
+      "rotate": 0,
+      "hide": false,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "button_top",
+      "top": 484.98,
+      "left": 469.39,
+      "rotate": 0,
+      "hide": false,
+      "attrs": { "color": "yellow", "bounce": "0" }
+    }
+  ],
+  "connections": [
+    [ "uno:5V", "neopixels:VDD", "red", [ "v30", "*", "h-256", "v10" ] ],
+    [ "uno:GND.1", "neopixels:VSS", "black", [ "v-20", "*", "v15" ] ],
+    [ "uno:2", "neopixels:DIN", "blue", [ "*", "v20" ] ],
+    [ "uno:5V", "pot:VCC", "red", [ "v30", "h20" ] ],
+    [ "uno:GND.2", "pot:GND", "black", [ "v40", "h20" ] ],
+    [ "uno:A0", "pot:SIG", "yellow", [ "v20", "h20" ] ],
+    [ "uno:GND.1", "button_top:2.l", "black", [ "v-20" ] ],
+    [ "uno:3", "button_top:1.l", "yellow", [ "v-10" ] ]
+  ]
+}
