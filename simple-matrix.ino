@@ -53,6 +53,9 @@ String menu(String playername)
   Serial.println("1. SELECT YOUR NAME:     ");
   pname = Serial.readStringUntil("\n");
   Serial.println("YOU HAVE CHOSEN: " + pname);
+  Serial.println("");
+  Serial.println("YOU HAVE TO DEFEAT THE INVADERS.");
+  Serial.println("SAVE THE WORLD, RAISE YOUR LEVEL!");
 
   return pname;
 }
