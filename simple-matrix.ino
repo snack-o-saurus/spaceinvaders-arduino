@@ -53,6 +53,8 @@ string menu(string playername)
   Serial.println("YOU HAVE CHOSEN: " + pname);
 
   playername = pname;
+  
+  return playername;
 }
 
 int highscore(int scoring)
